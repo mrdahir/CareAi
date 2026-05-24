@@ -1,0 +1,168 @@
+{
+  "methods": [
+    {
+      "id": "implant",
+      "names": {
+        "en": "Contraceptive Implant",
+        "sw": "Kipunguza Uzazi (Implanti)",
+        "am": "የእርግዝና መከላከያ ኢምፕላንት",
+        "fr": "Implant contraceptif",
+        "so": "Ka hortagga uurka (Implant)"
+      },
+      "descriptions": {
+        "en": "A small rod placed under the skin of the upper arm. Releases progestin to prevent pregnancy for 3-5 years.",
+        "sw": "Kamba ndogo inayowekwa chini ya ngozi ya mkono. Hutoa homoni ya progesterone kwa miaka 3-5.",
+        "fr": "Petite tige sous la peau du bras. Libère une progestative pendant 3 à 5 ans."
+      },
+      "effectiveness": 99.9,
+      "duration": "3-5 years",
+      "duration_category": "long_term",
+      "reversible": true,
+      "side_effects": {
+        "common": [
+          {"en": "Irregular bleeding", "sw": "Kutokwa na damu kwa njia isiyo ya kawaida"},
+          {"en": "Headaches", "sw": "Maumivu ya kichwa"}
+        ]
+      },
+      "contraindications": ["pregnancy", "breast_cancer_history"],
+      "accessibility": "clinic_only",
+      "cost": "low",
+      "best_for": ["breastfeeding_mothers", "long_term_spacing"],
+      "sources": ["WHO_2022_contraceptive_methods", "CDC_guidelines"]
+    },
+    {
+      "id": "iud",
+      "names": {
+        "en": "Intrauterine Device (IUD)",
+        "sw": "Kifaa cha Uzazi (IUD)",
+        "fr": "Dispositif intra-utérin (DIU)"
+      },
+      "descriptions": {
+        "en": "A small T-shaped device placed in the uterus. Hormonal or copper types available.",
+        "sw": "Kifaa kidogo kinachowekwa kwenye kizazi. Aina za homoni au shaba."
+      },
+      "effectiveness": 99.2,
+      "duration": "5-10 years",
+      "duration_category": "long_term",
+      "reversible": true,
+      "side_effects": {
+        "common": [
+          {"en": "Cramping after insertion", "sw": "Maumivu ya tumbo baada ya kuwekwa"},
+          {"en": "Heavier periods (copper IUD)", "sw": "Hedhi nzito (IUD ya shaba)"}
+        ]
+      },
+      "contraindications": ["pregnancy", "pelvic_infection"],
+      "accessibility": "clinic_only",
+      "cost": "medium",
+      "best_for": ["long_term_spacing"],
+      "sources": ["WHO_2022_contraceptive_methods"]
+    },
+    {
+      "id": "pill",
+      "names": {
+        "en": "Oral Contraceptive Pill",
+        "sw": "Kidonge cha Kuzuia Uzazi",
+        "fr": "Pilule contraceptive"
+      },
+      "descriptions": {
+        "en": "Daily pill containing hormones. Must be taken at the same time each day.",
+        "sw": "Kidonge cha kila siku chenye homoni. Chukua kwa wakati mmoja kila siku."
+      },
+      "effectiveness": 91.0,
+      "duration": "daily use",
+      "duration_category": "short_term",
+      "reversible": true,
+      "side_effects": {
+        "common": [
+          {"en": "Nausea", "sw": "Kichefuchefu"},
+          {"en": "Breast tenderness", "sw": "Maumivu ya matiti"}
+        ]
+      },
+      "contraindications": ["hypertension", "smoking_over_35", "pregnancy"],
+      "accessibility": "prescription_needed",
+      "cost": "low",
+      "best_for": ["short_term_spacing"],
+      "sources": ["WHO_2022_contraceptive_methods", "CDC_guidelines"]
+    },
+    {
+      "id": "injectable",
+      "names": {
+        "en": "Injectable Contraceptive (DMPA)",
+        "sw": "Sindano ya Kuzuia Uzazi",
+        "fr": "Contraceptif injectable"
+      },
+      "descriptions": {
+        "en": "Injection given every 3 months at a health facility.",
+        "sw": "Sindano kila miezi 3 katika kituo cha afya."
+      },
+      "effectiveness": 96.0,
+      "duration": "3 months",
+      "duration_category": "medium",
+      "reversible": true,
+      "side_effects": {
+        "common": [
+          {"en": "Irregular bleeding", "sw": "Kutokwa na damu kwa njia isiyo ya kawaida"},
+          {"en": "Weight change", "sw": "Mabadiliko ya uzito"}
+        ]
+      },
+      "contraindications": ["pregnancy"],
+      "accessibility": "clinic_only",
+      "cost": "low",
+      "best_for": ["breastfeeding_mothers", "privacy_needed"],
+      "sources": ["WHO_2022_contraceptive_methods"]
+    },
+    {
+      "id": "condom",
+      "names": {
+        "en": "Male Condom",
+        "sw": "Kondomu",
+        "fr": "Préservatif masculin"
+      },
+      "descriptions": {
+        "en": "Barrier method that also protects against STIs. Used with each act of intercourse.",
+        "sw": "Njia ya kizuizi inayolinda pia dhidi ya magonjwa ya zinaa."
+      },
+      "effectiveness": 87.0,
+      "duration": "per use",
+      "duration_category": "short_term",
+      "reversible": true,
+      "side_effects": {
+        "common": [
+          {"en": "Rare latex allergy", "sw": "Mzio wa latex nadra"}
+        ]
+      },
+      "contraindications": [],
+      "accessibility": "available_ota",
+      "cost": "low",
+      "best_for": ["breastfeeding_mothers", "sti_protection"],
+      "sources": ["WHO_2022_contraceptive_methods", "CDC_guidelines"]
+    },
+    {
+      "id": "emergency",
+      "names": {
+        "en": "Emergency Contraception",
+        "sw": "Dharura ya Kuzuia Uzazi",
+        "fr": "Contraception d'urgence"
+      },
+      "descriptions": {
+        "en": "Pills taken within 72-120 hours after unprotected sex. Not for regular use.",
+        "sw": "Vidonge ndani ya masaa 72-120 baada ya ngono bila kinga. Si kwa matumizi ya kawaida."
+      },
+      "effectiveness": 89.0,
+      "duration": "one-time",
+      "duration_category": "short_term",
+      "reversible": true,
+      "side_effects": {
+        "common": [
+          {"en": "Nausea", "sw": "Kichefuchefu"},
+          {"en": "Temporary cycle changes", "sw": "Mabadiliko ya muda ya hedhi"}
+        ]
+      },
+      "contraindications": [],
+      "accessibility": "available_ota",
+      "cost": "low",
+      "best_for": ["emergency_only"],
+      "sources": ["WHO_2022_contraceptive_methods"]
+    }
+  ]
+}

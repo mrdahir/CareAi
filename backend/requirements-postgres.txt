@@ -1,0 +1,4 @@
+# Install when using Docker PostgreSQL + pgvector
+psycopg2-binary==2.9.9
+pgvector==0.2.4
+asyncpg==0.29.0

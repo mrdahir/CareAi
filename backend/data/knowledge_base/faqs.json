@@ -1,0 +1,769 @@
+{
+  "faqs": [
+    {
+      "id": "faq_001",
+      "category": "breastfeeding",
+      "question": {
+        "en": "Is contraception safe while breastfeeding?",
+        "sw": "Is contraception safe while breastfeeding?"
+      },
+      "answer": {
+        "en": "Progestin-only methods are generally preferred during breastfeeding.",
+        "sw": "Progestin-only methods are generally preferred during breastfeeding."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_002",
+      "category": "breastfeeding",
+      "question": {
+        "en": "Can I use the pill while nursing?",
+        "sw": "Can I use the pill while nursing?"
+      },
+      "answer": {
+        "en": "Progestin-only pills are often recommended early postpartum.",
+        "sw": "Progestin-only pills are often recommended early postpartum."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_003",
+      "category": "side_effects",
+      "question": {
+        "en": "Will I bleed irregularly on the implant?",
+        "sw": "Will I bleed irregularly on the implant?"
+      },
+      "answer": {
+        "en": "Irregular bleeding is common initially and often improves.",
+        "sw": "Irregular bleeding is common initially and often improves."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_004",
+      "category": "side_effects",
+      "question": {
+        "en": "Do contraceptives cause weight gain?",
+        "sw": "Do contraceptives cause weight gain?"
+      },
+      "answer": {
+        "en": "Some users report weight change; effects vary by method.",
+        "sw": "Some users report weight change; effects vary by method."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_005",
+      "category": "effectiveness",
+      "question": {
+        "en": "Which method is most effective?",
+        "sw": "Which method is most effective?"
+      },
+      "answer": {
+        "en": "Long-acting methods (implant, IUD) have the highest effectiveness.",
+        "sw": "Long-acting methods (implant, IUD) have the highest effectiveness."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_006",
+      "category": "effectiveness",
+      "question": {
+        "en": "How effective are condoms?",
+        "sw": "How effective are condoms?"
+      },
+      "answer": {
+        "en": "About 87% with typical use; also prevents STIs.",
+        "sw": "About 87% with typical use; also prevents STIs."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_007",
+      "category": "privacy",
+      "question": {
+        "en": "Can I get contraception confidentially?",
+        "sw": "Can I get contraception confidentially?"
+      },
+      "answer": {
+        "en": "Clinics offer confidential family planning services.",
+        "sw": "Clinics offer confidential family planning services."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_008",
+      "category": "cost",
+      "question": {
+        "en": "Are implants free at public clinics?",
+        "sw": "Are implants free at public clinics?"
+      },
+      "answer": {
+        "en": "Many public facilities offer subsidized family planning.",
+        "sw": "Many public facilities offer subsidized family planning."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_009",
+      "category": "general",
+      "question": {
+        "en": "At what age can I start contraception?",
+        "sw": "At what age can I start contraception?"
+      },
+      "answer": {
+        "en": "Eligible adolescents may use appropriate methods with counseling.",
+        "sw": "Eligible adolescents may use appropriate methods with counseling."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_010",
+      "category": "general",
+      "question": {
+        "en": "Do I need a pelvic exam for all methods?",
+        "sw": "Do I need a pelvic exam for all methods?"
+      },
+      "answer": {
+        "en": "Not all methods require a pelvic exam.",
+        "sw": "Not all methods require a pelvic exam."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_011",
+      "category": "general",
+      "question": {
+        "en": "Common question about general and family planning (11)",
+        "sw": "Swali kuhusu general (11)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on general. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu general. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_012",
+      "category": "breastfeeding",
+      "question": {
+        "en": "Common question about breastfeeding and family planning (12)",
+        "sw": "Swali kuhusu breastfeeding (12)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on breastfeeding. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu breastfeeding. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_013",
+      "category": "side_effects",
+      "question": {
+        "en": "Common question about side_effects and family planning (13)",
+        "sw": "Swali kuhusu side_effects (13)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on side_effects. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu side_effects. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_014",
+      "category": "effectiveness",
+      "question": {
+        "en": "Common question about effectiveness and family planning (14)",
+        "sw": "Swali kuhusu effectiveness (14)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on effectiveness. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu effectiveness. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_015",
+      "category": "privacy",
+      "question": {
+        "en": "Common question about privacy and family planning (15)",
+        "sw": "Swali kuhusu privacy (15)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on privacy. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu privacy. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_016",
+      "category": "cost",
+      "question": {
+        "en": "Common question about cost and family planning (16)",
+        "sw": "Swali kuhusu cost (16)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on cost. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu cost. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_017",
+      "category": "general",
+      "question": {
+        "en": "Common question about general and family planning (17)",
+        "sw": "Swali kuhusu general (17)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on general. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu general. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_018",
+      "category": "breastfeeding",
+      "question": {
+        "en": "Common question about breastfeeding and family planning (18)",
+        "sw": "Swali kuhusu breastfeeding (18)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on breastfeeding. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu breastfeeding. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_019",
+      "category": "side_effects",
+      "question": {
+        "en": "Common question about side_effects and family planning (19)",
+        "sw": "Swali kuhusu side_effects (19)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on side_effects. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu side_effects. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_020",
+      "category": "effectiveness",
+      "question": {
+        "en": "Common question about effectiveness and family planning (20)",
+        "sw": "Swali kuhusu effectiveness (20)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on effectiveness. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu effectiveness. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_021",
+      "category": "privacy",
+      "question": {
+        "en": "Common question about privacy and family planning (21)",
+        "sw": "Swali kuhusu privacy (21)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on privacy. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu privacy. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_022",
+      "category": "cost",
+      "question": {
+        "en": "Common question about cost and family planning (22)",
+        "sw": "Swali kuhusu cost (22)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on cost. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu cost. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_023",
+      "category": "general",
+      "question": {
+        "en": "Common question about general and family planning (23)",
+        "sw": "Swali kuhusu general (23)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on general. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu general. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_024",
+      "category": "breastfeeding",
+      "question": {
+        "en": "Common question about breastfeeding and family planning (24)",
+        "sw": "Swali kuhusu breastfeeding (24)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on breastfeeding. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu breastfeeding. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_025",
+      "category": "side_effects",
+      "question": {
+        "en": "Common question about side_effects and family planning (25)",
+        "sw": "Swali kuhusu side_effects (25)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on side_effects. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu side_effects. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_026",
+      "category": "effectiveness",
+      "question": {
+        "en": "Common question about effectiveness and family planning (26)",
+        "sw": "Swali kuhusu effectiveness (26)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on effectiveness. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu effectiveness. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_027",
+      "category": "privacy",
+      "question": {
+        "en": "Common question about privacy and family planning (27)",
+        "sw": "Swali kuhusu privacy (27)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on privacy. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu privacy. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_028",
+      "category": "cost",
+      "question": {
+        "en": "Common question about cost and family planning (28)",
+        "sw": "Swali kuhusu cost (28)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on cost. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu cost. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_029",
+      "category": "general",
+      "question": {
+        "en": "Common question about general and family planning (29)",
+        "sw": "Swali kuhusu general (29)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on general. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu general. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_030",
+      "category": "breastfeeding",
+      "question": {
+        "en": "Common question about breastfeeding and family planning (30)",
+        "sw": "Swali kuhusu breastfeeding (30)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on breastfeeding. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu breastfeeding. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_031",
+      "category": "side_effects",
+      "question": {
+        "en": "Common question about side_effects and family planning (31)",
+        "sw": "Swali kuhusu side_effects (31)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on side_effects. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu side_effects. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_032",
+      "category": "effectiveness",
+      "question": {
+        "en": "Common question about effectiveness and family planning (32)",
+        "sw": "Swali kuhusu effectiveness (32)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on effectiveness. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu effectiveness. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_033",
+      "category": "privacy",
+      "question": {
+        "en": "Common question about privacy and family planning (33)",
+        "sw": "Swali kuhusu privacy (33)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on privacy. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu privacy. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_034",
+      "category": "cost",
+      "question": {
+        "en": "Common question about cost and family planning (34)",
+        "sw": "Swali kuhusu cost (34)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on cost. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu cost. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_035",
+      "category": "general",
+      "question": {
+        "en": "Common question about general and family planning (35)",
+        "sw": "Swali kuhusu general (35)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on general. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu general. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_036",
+      "category": "breastfeeding",
+      "question": {
+        "en": "Common question about breastfeeding and family planning (36)",
+        "sw": "Swali kuhusu breastfeeding (36)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on breastfeeding. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu breastfeeding. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_037",
+      "category": "side_effects",
+      "question": {
+        "en": "Common question about side_effects and family planning (37)",
+        "sw": "Swali kuhusu side_effects (37)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on side_effects. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu side_effects. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_038",
+      "category": "effectiveness",
+      "question": {
+        "en": "Common question about effectiveness and family planning (38)",
+        "sw": "Swali kuhusu effectiveness (38)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on effectiveness. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu effectiveness. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_039",
+      "category": "privacy",
+      "question": {
+        "en": "Common question about privacy and family planning (39)",
+        "sw": "Swali kuhusu privacy (39)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on privacy. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu privacy. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_040",
+      "category": "cost",
+      "question": {
+        "en": "Common question about cost and family planning (40)",
+        "sw": "Swali kuhusu cost (40)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on cost. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu cost. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_041",
+      "category": "general",
+      "question": {
+        "en": "Common question about general and family planning (41)",
+        "sw": "Swali kuhusu general (41)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on general. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu general. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_042",
+      "category": "breastfeeding",
+      "question": {
+        "en": "Common question about breastfeeding and family planning (42)",
+        "sw": "Swali kuhusu breastfeeding (42)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on breastfeeding. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu breastfeeding. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_043",
+      "category": "side_effects",
+      "question": {
+        "en": "Common question about side_effects and family planning (43)",
+        "sw": "Swali kuhusu side_effects (43)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on side_effects. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu side_effects. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_044",
+      "category": "effectiveness",
+      "question": {
+        "en": "Common question about effectiveness and family planning (44)",
+        "sw": "Swali kuhusu effectiveness (44)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on effectiveness. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu effectiveness. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_045",
+      "category": "privacy",
+      "question": {
+        "en": "Common question about privacy and family planning (45)",
+        "sw": "Swali kuhusu privacy (45)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on privacy. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu privacy. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_046",
+      "category": "cost",
+      "question": {
+        "en": "Common question about cost and family planning (46)",
+        "sw": "Swali kuhusu cost (46)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on cost. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu cost. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_047",
+      "category": "general",
+      "question": {
+        "en": "Common question about general and family planning (47)",
+        "sw": "Swali kuhusu general (47)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on general. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu general. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_048",
+      "category": "breastfeeding",
+      "question": {
+        "en": "Common question about breastfeeding and family planning (48)",
+        "sw": "Swali kuhusu breastfeeding (48)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on breastfeeding. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu breastfeeding. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_049",
+      "category": "side_effects",
+      "question": {
+        "en": "Common question about side_effects and family planning (49)",
+        "sw": "Swali kuhusu side_effects (49)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on side_effects. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu side_effects. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_050",
+      "category": "effectiveness",
+      "question": {
+        "en": "Common question about effectiveness and family planning (50)",
+        "sw": "Swali kuhusu effectiveness (50)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on effectiveness. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu effectiveness. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    },
+    {
+      "id": "faq_051",
+      "category": "privacy",
+      "question": {
+        "en": "Common question about privacy and family planning (51)",
+        "sw": "Swali kuhusu privacy (51)"
+      },
+      "answer": {
+        "en": "Evidence-based answer on privacy. Consult a healthcare provider for personal advice.",
+        "sw": "Jibu la kiafya kuhusu privacy. Wasiliana na kliniki."
+      },
+      "sources": [
+        "WHO_2022_contraceptive_methods"
+      ]
+    }
+  ]
+}

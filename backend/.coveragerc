@@ -1,0 +1,10 @@
+[run]
+source = app
+omit =
+    app/services/claude_service.py
+    */tests/*
+
+[report]
+exclude_lines =
+    pragma: no cover
+    if TYPE_CHECKING:

@@ -1,0 +1,378 @@
+{
+  "myths": [
+    {
+      "id": "myth_001",
+      "myth": {
+        "en": "Family planning causes permanent infertility",
+        "sw": "Family planning causes permanent infertility"
+      },
+      "fact": {
+        "en": "Family planning is reversible. Fertility typically returns within 1-3 months.",
+        "sw": "Family planning is reversible. Fertility typically returns within 1-3 months."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Family planning is reversible. Fertility typically returns within 1-3 months.",
+      "severity": "high",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_002",
+      "myth": {
+        "en": "Contraceptive pills make you infertile",
+        "sw": "Contraceptive pills make you infertile"
+      },
+      "fact": {
+        "en": "Pills are reversible; ovulation usually resumes within 1-3 months.",
+        "sw": "Pills are reversible; ovulation usually resumes within 1-3 months."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Pills are reversible; ovulation usually resumes within 1-3 months.",
+      "severity": "high",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_003",
+      "myth": {
+        "en": "IUDs cause infertility",
+        "sw": "IUDs cause infertility"
+      },
+      "fact": {
+        "en": "IUDs do not cause infertility. Fertility returns quickly after removal.",
+        "sw": "IUDs do not cause infertility. Fertility returns quickly after removal."
+      },
+      "evidence": "WHO/CDC evidence-based correction: IUDs do not cause infertility. Fertility returns quickly after removal.",
+      "severity": "high",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_004",
+      "myth": {
+        "en": "Implants are only for women who already have children",
+        "sw": "Implants are only for women who already have children"
+      },
+      "fact": {
+        "en": "Implants are safe for nulliparous women when clinically appropriate.",
+        "sw": "Implants are safe for nulliparous women when clinically appropriate."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Implants are safe for nulliparous women when clinically appropriate.",
+      "severity": "medium",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_005",
+      "myth": {
+        "en": "You cannot breastfeed while using contraception",
+        "sw": "You cannot breastfeed while using contraception"
+      },
+      "fact": {
+        "en": "Progestin-only methods are generally safe during breastfeeding.",
+        "sw": "Progestin-only methods are generally safe during breastfeeding."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Progestin-only methods are generally safe during breastfeeding.",
+      "severity": "high",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_006",
+      "myth": {
+        "en": "Condoms are not effective",
+        "sw": "Condoms are not effective"
+      },
+      "fact": {
+        "en": "Correct condom use is effective and prevents STIs.",
+        "sw": "Correct condom use is effective and prevents STIs."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Correct condom use is effective and prevents STIs.",
+      "severity": "medium",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_007",
+      "myth": {
+        "en": "Emergency contraception is an abortion pill",
+        "sw": "Emergency contraception is an abortion pill"
+      },
+      "fact": {
+        "en": "Emergency contraception prevents ovulation; it does not terminate pregnancy.",
+        "sw": "Emergency contraception prevents ovulation; it does not terminate pregnancy."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Emergency contraception prevents ovulation; it does not terminate pregnancy.",
+      "severity": "high",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_008",
+      "myth": {
+        "en": "Young women should not use contraception",
+        "sw": "Young women should not use contraception"
+      },
+      "fact": {
+        "en": "Medically appropriate methods can be used with counseling.",
+        "sw": "Medically appropriate methods can be used with counseling."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Medically appropriate methods can be used with counseling.",
+      "severity": "medium",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_009",
+      "myth": {
+        "en": "Contraception causes cancer",
+        "sw": "Contraception causes cancer"
+      },
+      "fact": {
+        "en": "Most methods do not cause cancer; some reduce certain cancer risks.",
+        "sw": "Most methods do not cause cancer; some reduce certain cancer risks."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Most methods do not cause cancer; some reduce certain cancer risks.",
+      "severity": "medium",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_010",
+      "myth": {
+        "en": "Natural methods are always safer",
+        "sw": "Natural methods are always safer"
+      },
+      "fact": {
+        "en": "Natural methods have higher failure rates with typical use.",
+        "sw": "Natural methods have higher failure rates with typical use."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Natural methods have higher failure rates with typical use.",
+      "severity": "low",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_011",
+      "myth": {
+        "en": "You need rest for a month after IUD insertion",
+        "sw": "You need rest for a month after IUD insertion"
+      },
+      "fact": {
+        "en": "Most women resume normal activities within 1-2 days.",
+        "sw": "Most women resume normal activities within 1-2 days."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Most women resume normal activities within 1-2 days.",
+      "severity": "low",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_012",
+      "myth": {
+        "en": "Injectable causes permanent bone damage",
+        "sw": "Injectable causes permanent bone damage"
+      },
+      "fact": {
+        "en": "Bone effects are generally reversible for most users.",
+        "sw": "Bone effects are generally reversible for most users."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Bone effects are generally reversible for most users.",
+      "severity": "medium",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_013",
+      "myth": {
+        "en": "Contraception reduces sexual desire permanently",
+        "sw": "Contraception reduces sexual desire permanently"
+      },
+      "fact": {
+        "en": "Effects are usually reversible when the method is stopped.",
+        "sw": "Effects are usually reversible when the method is stopped."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Effects are usually reversible when the method is stopped.",
+      "severity": "low",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_014",
+      "myth": {
+        "en": "Only married women should use family planning",
+        "sw": "Only married women should use family planning"
+      },
+      "fact": {
+        "en": "WHO supports access for all eligible women of reproductive age.",
+        "sw": "WHO supports access for all eligible women of reproductive age."
+      },
+      "evidence": "WHO/CDC evidence-based correction: WHO supports access for all eligible women of reproductive age.",
+      "severity": "medium",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_015",
+      "myth": {
+        "en": "Withdrawal is as effective as condoms",
+        "sw": "Withdrawal is as effective as condoms"
+      },
+      "fact": {
+        "en": "Withdrawal has a much higher failure rate than condoms.",
+        "sw": "Withdrawal has a much higher failure rate than condoms."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Withdrawal has a much higher failure rate than condoms.",
+      "severity": "medium",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_016",
+      "myth": {
+        "en": "Hormonal methods cause weight gain in everyone",
+        "sw": "Hormonal methods cause weight gain in everyone"
+      },
+      "fact": {
+        "en": "Weight changes vary by individual and method.",
+        "sw": "Weight changes vary by individual and method."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Weight changes vary by individual and method.",
+      "severity": "low",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_017",
+      "myth": {
+        "en": "You must have a period every month on the pill",
+        "sw": "You must have a period every month on the pill"
+      },
+      "fact": {
+        "en": "Continuous use can safely reduce bleeding frequency.",
+        "sw": "Continuous use can safely reduce bleeding frequency."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Continuous use can safely reduce bleeding frequency.",
+      "severity": "low",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_018",
+      "myth": {
+        "en": "Contraception protects against all STIs",
+        "sw": "Contraception protects against all STIs"
+      },
+      "fact": {
+        "en": "Only condoms provide substantial STI protection.",
+        "sw": "Only condoms provide substantial STI protection."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Only condoms provide substantial STI protection.",
+      "severity": "high",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_019",
+      "myth": {
+        "en": "Herbs can replace clinical contraception",
+        "sw": "Herbs can replace clinical contraception"
+      },
+      "fact": {
+        "en": "Herbal remedies lack reliable evidence for prevention.",
+        "sw": "Herbal remedies lack reliable evidence for prevention."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Herbal remedies lack reliable evidence for prevention.",
+      "severity": "high",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_020",
+      "myth": {
+        "en": "Long-term contraception damages the womb",
+        "sw": "Long-term contraception damages the womb"
+      },
+      "fact": {
+        "en": "Approved long-term methods are not shown to permanently damage the uterus.",
+        "sw": "Approved long-term methods are not shown to permanently damage the uterus."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Approved long-term methods are not shown to permanently damage the uterus.",
+      "severity": "medium",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_021",
+      "myth": {
+        "en": "Vasectomy is always irreversible",
+        "sw": "Vasectomy is always irreversible"
+      },
+      "fact": {
+        "en": "Reversal is sometimes possible but not guaranteed.",
+        "sw": "Reversal is sometimes possible but not guaranteed."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Reversal is sometimes possible but not guaranteed.",
+      "severity": "low",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    },
+    {
+      "id": "myth_022",
+      "myth": {
+        "en": "Copper IUD releases harmful metals",
+        "sw": "Copper IUD releases harmful metals"
+      },
+      "fact": {
+        "en": "Copper IUDs are WHO-approved and safe for long-term use.",
+        "sw": "Copper IUDs are WHO-approved and safe for long-term use."
+      },
+      "evidence": "WHO/CDC evidence-based correction: Copper IUDs are WHO-approved and safe for long-term use.",
+      "severity": "medium",
+      "sources": [
+        "WHO_2022_contraceptive_methods",
+        "CDC_guidelines"
+      ]
+    }
+  ]
+}

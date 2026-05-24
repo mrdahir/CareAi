@@ -1,0 +1,40 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r backend/requirements.txt
+      - run: python backend/scripts/gen_kb.py
+        working-directory: .
+      - run: pytest -v --cov=app --cov-report=term-missing
+        working-directory: backend
+        env:
+          DATABASE_URL: sqlite+aiosqlite:///./test_ci.db
+          LLM_PROVIDER: gemini
+          GEMINI_API_KEY: ""
+          GROQ_API_KEY: ""
+          RATE_LIMIT_ENABLED: "false"
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - run: npm ci
+        working-directory: frontend
+      - run: npm run test:run
+        working-directory: frontend
+      - run: npm run build
+        working-directory: frontend
