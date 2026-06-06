@@ -23,7 +23,7 @@ def test_recommend_returns_top_methods():
 
 
 @pytest.mark.unit
-def test_breastfeeding_excludes_combined_pill_logic():
+def test_breastfeeding_bonus_applied_to_lactation_compatible_methods():
     engine = RecommendationEngine()
     req = RecommendRequest(
         age=25,
@@ -32,6 +32,20 @@ def test_breastfeeding_excludes_combined_pill_logic():
         preferred_duration="long_term",
         language="en",
     )
-    result = engine.recommend(req)
-    methods = [r.method_id for r in result.recommendations]
-    assert "implant" in methods or "condom" in methods or "injectable" in methods
+    no_bf = RecommendRequest(
+        age=25,
+        breastfeeding=False,
+        pregnancy_goals="space_children",
+        preferred_duration="long_term",
+        language="en",
+    )
+    bf_result = engine.recommend(req)
+    no_bf_result = engine.recommend(no_bf)
+    bf_implant = next(
+        (r for r in bf_result.recommendations if r.method_id == "implant"), None
+    )
+    no_bf_implant = next(
+        (r for r in no_bf_result.recommendations if r.method_id == "implant"), None
+    )
+    assert bf_implant is not None and no_bf_implant is not None
+    assert bf_implant.match_score >= no_bf_implant.match_score

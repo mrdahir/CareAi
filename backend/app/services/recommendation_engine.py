@@ -131,9 +131,12 @@ class RecommendationEngine:
         return 15.0
 
     def _breastfeeding_bonus(self, method: Dict[str, Any], req: RecommendRequest) -> float:
-        if req.breastfeeding and "breastfeeding" in method.get("best_for", []):
+        if not req.breastfeeding:
+            return 0.0
+        best_for = method.get("best_for", [])
+        if any("breastfeeding" in tag for tag in best_for):
             return 10.0
-        if req.breastfeeding and method["id"] in ("implant", "iud", "condom", "injectable_progestin"):
+        if method["id"] in ("implant", "iud", "condom", "injectable"):
             return 8.0
         return 0.0
 

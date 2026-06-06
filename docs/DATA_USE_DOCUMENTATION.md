@@ -82,23 +82,27 @@ Structured content files:
 
 ### Data permissions and licenses for public and external datasets used
 
-| Data asset | Permission / licence | Team obligation |
-|------------|---------------------|-----------------|
-| DASSA Western Kenya programme data | Challenge dataset terms (HASH / DASSA platform) | Use for challenge submission; aggregate processing only |
-| WHO / CDC referenced content | Public health guidance (citation required) | Educational use; clinical review before production |
-| MIT-licensed codebase | [LICENSE](../LICENSE) | Attribute contributors |
-| Gemini / Groq | Provider terms of service | API keys via environment; no key commit |
+| Data asset | Permission / licence | Use |
+|------------|---------------------|-----|
+| DASSA Western Kenya programme data | Challenge dataset terms (HASH / DASSA platform) | Challenge submission; aggregate processing only |
+| WHO / CDC referenced content | Public health guidance (citation required) | Educational use |
+| MIT-licensed codebase | MIT Licence | Open-source attribution |
+| Gemini / Groq | Provider terms of service | API inference via environment configuration |
 
 ### Privacy protection measures
 
 - Programme API exposes **aggregate statistics only** — no individual client records
 - Chat persistence uses **anonymous UUIDs**; no mandatory PII collection
-- README advises against sharing national IDs in chat
+- User guide advises against sharing national IDs in chat
 - Rate limiting reduces bulk data extraction (100 req/60 s default)
 
 ### Compliance with ethical standards
 
 - Medical disclaimer on all chat responses and frontend footer
 - Non-diagnostic scope enforced in LLM system prompts
-- Health content changes require qualified professional review (`CONTRIBUTING.md`)
-- See [TECHNICAL_REPORT.md](TECHNICAL_REPORT.md) Section D (Ethical and Responsible AI Considerations) for full ethical analysis
+- Health content is aligned with WHO/CDC sources and non-diagnostic scope enforced in LLM system prompts
+- Ethical analysis is documented in the Technical Report, Section D (Ethical and Responsible AI Considerations)
+
+---
+
+*End of document.*

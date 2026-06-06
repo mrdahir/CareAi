@@ -175,6 +175,8 @@ More: interactive API docs at `http://localhost:8000/docs` when the backend is r
 
 | Document | Description |
 |----------|-------------|
+| [docs/SUBMISSION_CHECKLIST.md](docs/SUBMISSION_CHECKLIST.md) | HASH submission checklist (all 7 deliverables) |
+| [docs/REPRODUCIBILITY_PACKAGE.md](docs/REPRODUCIBILITY_PACKAGE.md) | How reviewers run and verify the prototype |
 | [docs/USER_GUIDE.md](docs/USER_GUIDE.md) | How to use the app |
 | [docs/TECHNICAL_REPORT.md](docs/TECHNICAL_REPORT.md) | Technical report (HASH submission) |
 | [docs/DATA_USE_DOCUMENTATION.md](docs/DATA_USE_DOCUMENTATION.md) | Data use documentation |

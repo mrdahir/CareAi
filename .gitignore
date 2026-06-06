@@ -64,6 +64,15 @@ docs/*
 !docs/DATA_USE_DOCUMENTATION.md
 !docs/TEAM_CONTRIBUTION_STATEMENT.md
 !docs/USER_GUIDE.md
+!docs/SUBMISSION_CHECKLIST.md
+!docs/REPRODUCIBILITY_PACKAGE.md
+
+# --- Generated exports (regenerate with docs/export_technical_report.py) ---
+docs/*.docx
+docs/*.pdf
+docs/*_export.docx
+docs/export_technical_report.py
+docs/TECHNICAL_REPORT_EXTENDED.md
 
 # --- Challenge brief PDF (organizers provide; keep locally) ---
 HASH Innovation Challenge Prototype Submission Requirements.pdf

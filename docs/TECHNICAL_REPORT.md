@@ -1,7 +1,7 @@
-# Technical Report (Maximum 10 Pages)
+# Technical Report
 
 **HASH Innovation Challenge — Prototype Submission**  
-**Deliverable 2 of 7:** Technical Report (Maximum 10 Pages)
+**Deliverable 2 of 7:** Technical Report
 
 | Field | Value |
 |-------|-------|
@@ -11,7 +11,7 @@
 | **Date** | June 2026 |
 | **Source Code Repository** | https://github.com/mrdahir/CareAi/ |
 
-Related deliverables include the prototype web app, this repository, data use documentation, and team contribution statement. Additional HASH submission materials (reproducibility package, IP declaration, checklist) are kept locally for portal upload, not in this repository.
+Related deliverables in this repository: [Submission Checklist](https://github.com/mrdahir/CareAi/blob/main/docs/SUBMISSION_CHECKLIST.md), [Data use Documentation](https://github.com/mrdahir/CareAi/blob/main/docs/DATA_USE_DOCUMENTATION.md), [Reproducibility Package](https://github.com/mrdahir/CareAi/blob/main/docs/REPRODUCIBILITY_PACKAGE.md), [Team Contribution Statement](https://github.com/mrdahir/CareAi/blob/main/docs/TEAM_CONTRIBUTION_STATEMENT.md), and [User Guide](https://github.com/mrdahir/CareAi/blob/main/docs/USER_GUIDE.md). The intellectual property declaration is submitted separately to HASH (not stored in this repo).
 
 ---
 
@@ -111,7 +111,7 @@ The table below separates what judges will see in the UI from what exists on the
 
 **Myth buster.** User text is matched against 22 myths with Jaccard similarity ≥ 0.35 (confidence 0.95). Otherwise the LLM evaluates the claim (confidence 0.70). Severity and sources display in the UI.
 
-**Safety.** Rate limiting (100 requests per minute per IP), no prescription logic, footer disclaimer on every page. Clinical review of KB content before live deployment is documented in CONTRIBUTING.md.
+**Safety.** Rate limiting (100 requests per minute per IP), no prescription logic, footer disclaimer on every page. Clinical review of knowledge-base content before live deployment is documented in [CONTRIBUTING.md](https://github.com/mrdahir/CareAi/blob/main/CONTRIBUTING.md).
 
 ### User workflow
 
@@ -139,7 +139,7 @@ When an API key is present, the LLM layer adds paraphrase and tone—explaining 
 
 ### Algorithms and models implemented
 
-**Recommendation engine** (`recommendation_engine.py`). Each method starts from a base score in the KB. Adjustments include: contraindication filters (e.g. combined hormonal methods removed for hypertension or breastfeeding); effectiveness weighting by pregnancy goal; duration preference; accessibility tags; regional popularity bonus from programme JSON or country presets; breastfeeding bonus (+10 when `best_for` tags include breastfeeding-related labels; +8 for implant, IUD, condom, injectable after our v1.0.1 tag alignment fix). Top three methods by score are returned. If the best score falls below 70% of the normalised maximum, **condom** is injected as a dual-protection default.
+**Recommendation engine** ([recommendation_engine.py](https://github.com/mrdahir/CareAi/blob/main/backend/app/services/recommendation_engine.py)). Each method starts from a base score in the KB. Adjustments include: contraindication filters (e.g. combined hormonal methods removed for hypertension or breastfeeding); effectiveness weighting by pregnancy goal; duration preference; accessibility tags; regional popularity bonus from programme JSON or country presets; breastfeeding bonus (+10 when `best_for` tags include breastfeeding-related labels; +8 for implant, IUD, condom, injectable after our v1.0.1 tag alignment fix). Top three methods by score are returned. If the best score falls below 70% of the normalised maximum, **condom** is injected as a dual-protection default.
 
 **Myth buster.** Tokenise input and each myth statement, compute Jaccard index on word sets, take the best match above 0.35. Matched myths return stored rebuttals; unmatched text goes to the LLM myth prompt.
 
@@ -149,11 +149,11 @@ When an API key is present, the LLM layer adds paraphrase and tone—explaining 
 
 Monolithic FastAPI app with routers for chat, recommend, myths, programme, FAQ, contraceptives. Services: `chat_service`, `recommendation_engine`, `myth_service`, `kb_loader`, `llm_client`. React calls REST and SSE. Config via environment: `GEMINI_API_KEY`, `GROQ_API_KEY`, `DATABASE_URL`, CORS origins. Alembic migrations define chat and feedback tables.
 
-Security today: CORS allowlist, rate limits, no auth on the public demo (production would need facility tokens). Users should not enter names or national IDs in free text; the reproducibility package describes redaction if logs are exported for research. Backend entrypoint is `backend/app/main.py`; routers under `backend/app/api/`. Docker Compose and environment variables are documented in the README and [`REPRODUCIBILITY_PACKAGE.md`](REPRODUCIBILITY_PACKAGE.md).
+Security today: CORS allowlist, rate limits, no auth on the public demo (production would need facility tokens). Users should not enter names or national IDs in free text; see the [User Guide](https://github.com/mrdahir/CareAi/blob/main/docs/USER_GUIDE.md). Backend entrypoint is [backend/app/main.py](https://github.com/mrdahir/CareAi/blob/main/backend/app/main.py); routers under [backend/app/api/](https://github.com/mrdahir/CareAi/tree/main/backend/app/api). Setup, Docker, and step-by-step reproduction are in the [README](https://github.com/mrdahir/CareAi/blob/main/README.md) and [Reproducibility Package](https://github.com/mrdahir/CareAi/blob/main/docs/REPRODUCIBILITY_PACKAGE.md).
 
 ### Data processing pipeline
 
-Content authors edit JSON under `backend/app/data/` with per-language strings. On startup, `kb_loader` validates schemas and caches objects in memory. At request time, chat retrieval scans FAQs; recommendations read method objects directly; myths iterate the full list for similarity. Programme aggregates are produced offline by `western_kenya_pipeline.py` from challenge datasets and shipped as static JSON—no nightly ETL in the prototype.
+Content authors edit JSON under [backend/data/knowledge_base/](https://github.com/mrdahir/CareAi/tree/main/backend/data/knowledge_base) with per-language strings. On startup, `kb_loader` validates schemas and caches objects in memory. At request time, chat retrieval scans FAQs; recommendations read method objects directly; myths iterate the full list for similarity. Programme aggregates are produced offline by [western_kenya_pipeline.py](https://github.com/mrdahir/CareAi/blob/main/backend/scripts/data_processing/western_kenya_pipeline.py) from challenge datasets and shipped as static JSON—no nightly ETL in the prototype.
 
 Updates are git commits reviewed by the team, not automated scraping from the web. That keeps clinical accountability traceable.
 
@@ -183,7 +183,7 @@ Recommendations include per-method rationale strings from rules, not post-hoc LL
 
 ### Alignment with local/regional legal and regulatory requirements
 
-Where logs are kept, processes should align with the **Kenya Data Protection Act, 2019** and any partner IRB. Prompts exclude emergency diagnosis; users see referral language for severe symptoms. Adolescents receive the same clinical facts with confidentiality messaging on the About page. CONTRIBUTING.md requires clinical sign-off for KB changes. Team contribution and IP declarations accompany this submission as separate documents.
+Where logs are kept, processes should align with the **Kenya Data Protection Act, 2019** and any partner IRB. Prompts exclude emergency diagnosis; users see referral language for severe symptoms. Adolescents receive the same clinical facts with confidentiality messaging on the About page. [CONTRIBUTING.md](https://github.com/mrdahir/CareAi/blob/main/CONTRIBUTING.md) requires clinical sign-off for knowledge-base changes. See the [Team Contribution Statement](https://github.com/mrdahir/CareAi/blob/main/docs/TEAM_CONTRIBUTION_STATEMENT.md) for member roles; the IP declaration is submitted separately to HASH.
 
 ---
 
@@ -203,7 +203,7 @@ Aggregate chat themes (when logging is on) and visit statistics can sit beside D
 
 ### Long-term maintenance considerations
 
-Versioned data files, pytest in CI, Docker Compose for local parity, and [`REPRODUCIBILITY_PACKAGE.md`](REPRODUCIBILITY_PACKAGE.md) support handover to county IT teams. Near-term product work: expose `cost_sensitive` and `privacy_needed` in the survey; unify chat stream and persist paths; add FAQ and method browser pages. LLM chat remains optional—rules and myths work without API keys.
+Versioned data files, pytest in CI, Docker Compose for local parity, and the [Reproducibility Package](https://github.com/mrdahir/CareAi/blob/main/docs/REPRODUCIBILITY_PACKAGE.md) support handover to county IT teams and independent verification by HASH reviewers. Near-term product work: expose `cost_sensitive` and `privacy_needed` in the survey; unify chat stream and persist paths; add FAQ and method browser pages. LLM chat remains optional—rules and myths work without API keys.
 
 ---
 
@@ -216,13 +216,29 @@ Versioned data files, pytest in CI, Docker Compose for local parity, and [`REPRO
 
 ---
 
+## Team
+
+| Role | Team member | Repository link |
+|------|-------------|-----------------|
+| Backend, data integration, project lead | [Cabdi Shakur Mohamed Dahir](https://github.com/mrdahir/CareAi/tree/main/backend) | [backend/](https://github.com/mrdahir/CareAi/tree/main/backend) |
+| Frontend and UI | [Ayaan Xuseen Gorse](https://github.com/mrdahir/CareAi/tree/main/frontend) | [frontend/](https://github.com/mrdahir/CareAi/tree/main/frontend) |
+| Clinical content and public-health review | [Hana Mahdi Dahir](https://github.com/mrdahir/CareAi/tree/main/backend/data/knowledge_base), [Fardaws Ibraahim Maxamed](https://github.com/mrdahir/CareAi/tree/main/backend/data/knowledge_base) | [knowledge base](https://github.com/mrdahir/CareAi/tree/main/backend/data/knowledge_base) |
+
+Full contribution details: [Team Contribution Statement](https://github.com/mrdahir/CareAi/blob/main/docs/TEAM_CONTRIBUTION_STATEMENT.md) (Deliverable 6; PDF submitted with the HASH package). Reviewers can run the prototype using the [Reproducibility Package](https://github.com/mrdahir/CareAi/blob/main/docs/REPRODUCIBILITY_PACKAGE.md) and track all deliverables in the [Submission Checklist](https://github.com/mrdahir/CareAi/blob/main/docs/SUBMISSION_CHECKLIST.md).
+
+---
+
 ## Document control
 
-| Item | Detail |
-|------|--------|
+| Item | Location |
+|------|----------|
 | Source Code Repository | https://github.com/mrdahir/CareAi/ |
-| Reproducibility Package | `docs/REPRODUCIBILITY_PACKAGE.md` |
-| Data use Documentation | `docs/DATA_USE_DOCUMENTATION.md` |
+| Submission Checklist | https://github.com/mrdahir/CareAi/blob/main/docs/SUBMISSION_CHECKLIST.md |
+| Reproducibility Package | https://github.com/mrdahir/CareAi/blob/main/docs/REPRODUCIBILITY_PACKAGE.md |
+| Data use Documentation | https://github.com/mrdahir/CareAi/blob/main/docs/DATA_USE_DOCUMENTATION.md |
+| Team Contribution Statement | https://github.com/mrdahir/CareAi/blob/main/docs/TEAM_CONTRIBUTION_STATEMENT.md |
+| User Guide | https://github.com/mrdahir/CareAi/blob/main/docs/USER_GUIDE.md |
+| Technical Report (source) | https://github.com/mrdahir/CareAi/blob/main/docs/TECHNICAL_REPORT.md |
 | Prototype version | 1.0.0 |
 
 *End of report.*
