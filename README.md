@@ -1,165 +1,194 @@
 # CareApp
 
-**CareApp** is a reproductive health AI assistant for Sub-Saharan Africa — multilingual chat, contraceptive recommendations, and myth-busting backed by WHO/CDC-aligned knowledge.
+Reproductive health AI assistant for Sub-Saharan Africa — multilingual chat, contraceptive recommendations, myth-busting, and programme monitoring insights. Built with FastAPI and React.
 
-## Stack
+## Features
+
+- **Health chat** — streaming responses via Google Gemini or Groq (KB fallback without API keys)
+- **Recommendations** — rule-based contraceptive matching with regional data
+- **Myth buster** — evidence-based fact checks from a structured knowledge base
+- **Multilingual** — English, Kiswahili, Amharic, French, Somali (UI + AI)
+- **Programme data** — optional Western Kenya monitoring CSV integration
+
+## Tech stack
 
 | Layer | Technology |
 |-------|------------|
 | Backend | Python 3.11+, FastAPI, SQLAlchemy, Alembic |
-| Database | PostgreSQL 15 + pgvector (SQLite for local/tests) |
-| AI | **Google Gemini** (default) or **Groq** — KB fallback without keys |
-| Frontend | React 18, TypeScript, Vite, Tailwind CSS, Zustand |
+| Database | PostgreSQL 15 / SQLite (local) |
+| AI | Gemini (default) or Groq |
+| Frontend | React 18, TypeScript, Vite, Tailwind, Zustand |
+
+## Prerequisites
+
+- **Python** 3.11–3.13
+- **Node.js** 18+ (20 recommended)
+- **Docker** (optional, for PostgreSQL)
+- **API keys** (optional): [Google AI Studio](https://aistudio.google.com/) and/or [Groq](https://console.groq.com/)
 
 ## Project structure
 
 ```
 CareAiApp/
-├── backend/          # FastAPI API
-├── frontend/         # React SPA (careapp-frontend)
+├── README.md
+├── LICENSE
+├── CONTRIBUTING.md
+├── requirements.txt          # → backend/requirements.txt
 ├── docker-compose.yml
-├── docker-compose.prod.yml
-└── docs/             # API + deployment guides
+├── backend/                  # FastAPI API
+│   ├── requirements.txt
+│   ├── .env.example
+│   └── app/
+├── frontend/                 # React SPA
+│   ├── package.json
+│   └── .env.example
+└── docs/                     # HASH submission deliverables (markdown)
 ```
 
-## Quick start
+## Setup
 
-### 1. Database (optional Docker)
+### 1. Clone and configure
 
 ```bash
-docker-compose up -d postgres
+git clone https://github.com/mrdahir/CareAi.git
+cd CareAi
 ```
 
 ### 2. Backend
 
-**Recommended:** Python **3.11–3.13**.
-
 ```bash
-cd backend
-py -3.13 -m venv venv
-venv\Scripts\activate          # Windows
+# Create virtual environment (from repo root or backend/)
+python -m venv backend/venv
+# Windows:
+backend\venv\Scripts\activate
+# macOS/Linux:
+# source backend/venv/bin/activate
+
 pip install -r requirements.txt
-copy .env.example .env
+copy backend\.env.example backend\.env   # Windows
+# cp backend/.env.example backend/.env   # macOS/Linux
 ```
 
-Edit `.env`:
+Edit `backend/.env`:
 
 ```env
 DATABASE_URL=sqlite+aiosqlite:///./care_app.db
 LLM_PROVIDER=gemini
-GEMINI_API_KEY=your_gemini_key
-# GROQ_API_KEY=your_groq_key
+GEMINI_API_KEY=your_key_here
+# GROQ_API_KEY=your_key_here
 # LLM_PROVIDER=groq
+CORS_ORIGINS=["http://localhost:5173"]
 ```
 
+Initialize data and start the API:
+
 ```bash
-python scripts\gen_kb.py
-python scripts\data_processing\run_pipeline.py
-python scripts\load_knowledge_base.py
+cd backend
+python scripts/gen_kb.py
+python scripts/data_processing/run_pipeline.py
+python scripts/load_knowledge_base.py
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
-API docs: http://localhost:8000/docs
+- API: http://localhost:8000  
+- Swagger: http://localhost:8000/docs  
 
-**Docker backend** (uses `backend/.env` for Gemini/Groq keys):
+### 3. Frontend
+
+In a second terminal:
+
+```bash
+cd frontend
+npm install
+copy .env.example .env.local   # Windows
+# cp .env.example .env.local   # macOS/Linux
+npm run dev
+```
+
+- App: http://localhost:5173  
+
+### 4. Docker (optional)
 
 ```bash
 docker-compose up -d postgres
 docker-compose up backend
 ```
 
-**PostgreSQL migrations:**
+Ensure `backend/.env` contains your LLM keys. The backend container mounts programme data when the Western Kenya CSV folder is present.
 
-```bash
-alembic upgrade head
-```
+## Environment variables
 
-### 3. Frontend
+| Location | Key variables |
+|----------|----------------|
+| `backend/.env` | `DATABASE_URL`, `LLM_PROVIDER`, `GEMINI_API_KEY`, `GROQ_API_KEY`, `CORS_ORIGINS` |
+| `frontend/.env.local` | `VITE_API_URL`, `VITE_APP_NAME` |
 
-```bash
-cd frontend
-npm install
-copy .env.example .env.local
-npm run dev
-```
+See `backend/.env.example` and `frontend/.env.example` for full lists.
 
-App: http://localhost:5173 — chat uses **streaming** (`/api/chat/stream`) with fallback to `/api/chat`.
+## Programme monitoring data (optional)
 
-### Western Kenya programme data
+Raw DASSA CSV files are **not stored in this repository** (download from the challenge platform locally). The repo includes processed aggregates at `backend/data/processed/western_kenya_stats.json` so programme APIs work without the raw folder.
 
-Place monitoring CSVs in  
-`reversing-the-stall-in-fertility-decline-in-western-kenya-programme-monitoring-data-All-2026-05-19_1703/`  
-(or set `WESTERN_KENYA_DATA_DIR`), then:
+To refresh stats from your own copy of the CSVs, place exports in:
+
+`reversing-the-stall-in-fertility-decline-in-western-kenya-programme-monitoring-data-All-2026-05-19_1703/`
+
+Then process:
 
 ```bash
 cd backend
 python scripts/data_processing/western_kenya_pipeline.py
-# or: python scripts/data_processing/run_pipeline.py
 ```
 
-API: `GET /api/programme/summary`, `GET /api/programme/stats?county=Busia`  
-Home page shows a live stats card when data is loaded.
-
-- UI: English, Kiswahili, Amharic, French, Somali (header language selector)
-- AI: Gemini/Groq respond in the selected language; KB uses translated JSON fields
-
-Fill missing KB translations with Gemini (free tier — runs slowly, ~4s between calls):
-
-```bash
-cd backend
-python scripts/translate_kb.py --lang sw
-python scripts/load_knowledge_base.py
-```
-
-## Environment variables
-
-### Backend (`backend/.env`)
-
-| Variable | Description |
-|----------|-------------|
-| `DATABASE_URL` | PostgreSQL or SQLite async URL |
-| `LLM_PROVIDER` | `gemini` (default) or `groq` |
-| `GEMINI_API_KEY` | Google AI Studio key |
-| `GROQ_API_KEY` | Groq console key |
-| `RATE_LIMIT_ENABLED` | `true` / `false` |
-| `CORS_ORIGINS` | JSON array |
-
-### Frontend (`frontend/.env.local`)
-
-- `VITE_API_URL=http://localhost:8000/api`
-- `VITE_APP_NAME=CareApp`
+- `GET /api/programme/summary`  
+- `GET /api/programme/stats?county=Busia`  
 
 ## Tests
 
 ```bash
+# Backend
 cd backend
 pytest -v
-pytest --cov=app --cov-report=term-missing
 
-cd ../frontend
+# Frontend
+cd frontend
 npm run test:run
 npm run build
 ```
 
-## API endpoints
+## API overview
 
 | Method | Path | Description |
 |--------|------|-------------|
 | GET | `/api/health` | Health check |
 | POST | `/api/chat` | AI chat |
 | POST | `/api/chat/stream` | Streaming chat |
-| GET | `/api/chat/history` | Message history |
 | POST | `/api/recommend` | Contraceptive recommendations |
 | POST | `/api/myth-check` | Myth verification |
 | POST | `/api/faq` | FAQ answers |
 | GET | `/api/contraceptives` | List methods |
+| GET | `/api/programme/summary` | Programme stats (if data loaded) |
 
-See [docs/API_DOCUMENTATION.md](docs/API_DOCUMENTATION.md) and [docs/DEPLOYMENT_GUIDE.md](docs/DEPLOYMENT_GUIDE.md).
+More: interactive API docs at `http://localhost:8000/docs` when the backend is running.
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [docs/USER_GUIDE.md](docs/USER_GUIDE.md) | How to use the app |
+| [docs/TECHNICAL_REPORT.md](docs/TECHNICAL_REPORT.md) | Technical report (HASH submission) |
+| [docs/DATA_USE_DOCUMENTATION.md](docs/DATA_USE_DOCUMENTATION.md) | Data use documentation |
+| [docs/TEAM_CONTRIBUTION_STATEMENT.md](docs/TEAM_CONTRIBUTION_STATEMENT.md) | Team contribution statement |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | How to contribute |
+
+**Repository:** https://github.com/mrdahir/CareAi/
 
 ## Medical disclaimer
 
-CareApp provides general health education only. It is not a substitute for professional medical advice, diagnosis, or treatment. See [docs/DISCLAIMER.md](docs/DISCLAIMER.md).
+CareApp provides **general health education only**. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider for personal medical decisions.
 
 ## License
 
-Competition / educational use — verify health content with qualified reviewers before production deployment.
+[MIT License](LICENSE) — Copyright (c) 2026 CareApp contributors.
+
+Health content should be reviewed by qualified professionals before production use.

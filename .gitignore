@@ -17,7 +17,7 @@ htmlcov/
 .mypy_cache/
 .ruff_cache/
 
-# Environment
+# Environment and secrets
 .env
 .env.local
 .env.*.local
@@ -30,11 +30,12 @@ frontend/.vite/
 *.log
 npm-debug.log*
 
-# IDE
+# IDE and editor
 .idea/
 .vscode/
 *.swp
 .DS_Store
+~$*
 
 # Database
 *.db
@@ -45,3 +46,24 @@ postgres_data/
 
 # OS
 Thumbs.db
+
+# --- Local dev / AI tooling (not part of submission) ---
+CURSOR_PROMPTS_COMPREHENSIVE.md
+QUICK_EXECUTION_GUIDE.md
+TECHNICAL_REFERENCE.md
+care_app_mockup*.html
+
+# --- Challenge raw datasets (download locally; do not commit) ---
+reversing-the-stall-in-fertility-decline-in-western-kenya-programme-monitoring-data-All-2026-05-19_1703/
+reversing-the-stall-in-fertility-decline-in-western-kenya-programme-monitoring-data-All-2026-05-19_1703.zip
+*.zip
+
+# --- docs/: public repo documentation only (ignore all else) ---
+docs/*
+!docs/TECHNICAL_REPORT.md
+!docs/DATA_USE_DOCUMENTATION.md
+!docs/TEAM_CONTRIBUTION_STATEMENT.md
+!docs/USER_GUIDE.md
+
+# --- Challenge brief PDF (organizers provide; keep locally) ---
+HASH Innovation Challenge Prototype Submission Requirements.pdf
